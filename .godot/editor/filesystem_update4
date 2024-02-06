@@ -1,3 +1,6 @@
 res://world.tscn
 res://player.tscn
+res://FasterMovementData.tres
+res://SlowMovementData.tres
 res://player.gd
+res://PlayerMovementData.gd
