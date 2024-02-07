@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://tmqadfljth45"]
+[gd_scene load_steps=4 format=3 uid="uid://tmqadfljth45"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_rvvkc"]
 [ext_resource type="PackedScene" uid="uid://c1hrrohx3tv5w" path="res://player.tscn" id="2_gn85a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y018w"]
+size = Vector2(17, 76)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_rvvkc")
@@ -9,11 +12,23 @@ script = ExtResource("1_rvvkc")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-8, 24)
+position = Vector2(-7, 21)
 scale = Vector2(0.829082, 1.07143)
-polygon = PackedVector2Array(0, 0, 31.36, 0, 32, 48, 41.0092, 110.133, 95.2861, 110.133, 104.935, 84.9332, 123.028, 69.9999, 143.532, 69.9999, 142.929, 113.867, 172.48, 112.933, 165.243, 85.8666, 200.221, 86.7999, 210.474, 106.4, 240, 104, 244.849, 72.7999, 268.369, 69.0667, 270.178, 106.4, 296.714, 108.267, 296.714, 65.3332, 329.28, 69.9999, 328.074, 112, 366.671, 119.467, 365.464, 59.7333, 368, 0, 392, 0, 396.824, 52.2666, 392, 168, 0, 168)
+polygon = PackedVector2Array(0, 0, 31.36, 0, 32, 48, 41.0092, 99.8665, 73.5753, 99.8665, 78.4, 80.2666, 110.966, 83.0666, 120.615, 108.267, 171.274, 108.267, 210.474, 106.4, 203.84, 107.333, 208.665, 73.7332, 237.612, 74.6666, 241.231, 102.667, 295.508, 103.6, 297.92, 72.7999, 329.28, 72.7999, 328.074, 112, 365.464, 112.933, 365.464, 59.7333, 368, 0, 392, 0, 396.824, 52.2666, 392, 168, 0, 168)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_gn85a")]
 position = Vector2(40, 72)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(261, 26)
+shape = SubResource("RectangleShape2D_y018w")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+offset_left = 253.0
+offset_top = -12.0
+offset_right = 270.0
+offset_bottom = 64.0
