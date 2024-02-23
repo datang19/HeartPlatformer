@@ -6,4 +6,7 @@ res://level_completed.tscn
 res://level_two.tscn
 res://level_transition.tscn
 res://player.tscn
+res://default_theme.tres
+res://black_9slice.tres
 res://start_menu.gd
+res://world.gd
